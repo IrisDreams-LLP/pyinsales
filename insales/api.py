@@ -260,6 +260,24 @@ class InSalesApi(object):
                      (option_name_id, option_value_id))
 
     #========================================================================
+    # Поля товаров
+    #========================================================================
+    def get_product_fields(self):
+        return self._get('/admin/product_fields.xml') or []
+
+    def get_product_field(self, product_field_id):
+        return self._get('/admin/product_fields/%s.xml' % product_field_id)
+
+    def add_product_field(self, product_field_data):
+        return self._add('/admin/product_fields.xml', product_field_data, root='product_field')
+
+    def update_product_field(self, product_field_id, product_field_data):
+        return self._update('/admin/product_fields/%s.xml' % product_field_id, product_field_data, root='product_field')
+
+    def delete_product_field(self, product_field_id):
+        return self._delete('/admin/product_fields/%s.xml' % product_field_id)
+
+    #========================================================================
     # Товары
     #========================================================================
     def get_products(
