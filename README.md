@@ -204,6 +204,15 @@ update_option_value(self, option_name_id, option_value_id, option_value_data):
 delete_option_value(self, option_name_id, option_value_id):
 
 #========================================================================
+# Поля товаров
+#========================================================================
+get_product_fields(self)
+get_product_field(self, product_field_id)
+add_product_field(self, product_field_data)
+update_product_field(self, product_field_id, product_field_data)
+delete_product_field(self, product_field_id)
+
+#========================================================================
 # Товары
 #========================================================================
 get_products(self, limit=50, page=1, updated_since=None):
