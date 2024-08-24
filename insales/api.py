@@ -400,7 +400,7 @@ class InSalesApi(object):
 
     def create_similars(self, product_id, similar_product_ids):
         return self._add('/admin/products/%s/similars.xml' % product_id,
-                         similar_product_ids, root='similar_ids')
+                         similar_product_ids, root='similar-ids')
 
     def delete_similar(self, product_id, similar_product_id):
         return self._delete('/admin/products/%s/similars/%s.xml' %
@@ -414,7 +414,7 @@ class InSalesApi(object):
 
     def create_supplementaries(self, product_id, supplementary_product_ids):
         return self._add('/admin/products/%s/supplementaries.xml' % product_id,
-                         supplementary_product_ids, root='supplementary_ids')
+                         supplementary_product_ids, root='supplementary-ids')
 
     def delete_supplementary(self, product_id, supplementary_product_id):
         return self._delete('/admin/products/%s/supplementaries/%s.xml' %
