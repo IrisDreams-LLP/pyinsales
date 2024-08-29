@@ -371,6 +371,9 @@ class InSalesApi(object):
     #========================================================================
     # Размещение товара
     #========================================================================
+    def get_collect(self, collect_id):
+        return self._get('/admin/collects/%s.xml' % collect_id)
+    
     def get_collects(self, product_id=None, collection_id=None, page=1):
         qargs = {}
         if product_id:
